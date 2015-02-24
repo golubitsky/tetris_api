@@ -12,7 +12,7 @@ class Api::GamesController < ApplicationController
 
     if @game.save
       @games = Game.high_scores
-      render json: @game
+      render 'api/games/index'
     else
       render json: { error: @game.errors.full_messages }, status: :unprocessable_entity
     end
