@@ -1,0 +1,11 @@
+json.(game,
+  :id,
+  :username,
+  :score,
+  :lines,
+  :start_level,
+  :end_level,
+  :time,
+  :created_at,
+  :updated_at,
+  )
