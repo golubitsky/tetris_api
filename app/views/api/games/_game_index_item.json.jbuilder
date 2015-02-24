@@ -6,6 +6,7 @@ json.(game,
   :start_level,
   :end_level,
   :time,
-  :created_at,
-  :updated_at,
   )
+
+json.date game.created_at.strftime("%Y %B %d")
+json.time game.created_at.strftime("%H:%M")
