@@ -9,6 +9,7 @@ class Api::GamesController < ApplicationController
 
   def create
     @game = Game.new(game_params)
+    @game.username = @game.username.upcase
 
     if @game.save
       @games = Game.high_scores
