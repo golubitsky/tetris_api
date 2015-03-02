@@ -12,6 +12,7 @@ class Api::GamesController < ApplicationController
   def create
     @game = Game.new(game_params)
     @game.username = @game.username.upcase
+    @game.username = "ANONYMOUS" if @game.username == ''
 
     if @game.save
       @games = Game.high_scores
