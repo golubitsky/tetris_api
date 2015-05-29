@@ -7,16 +7,13 @@ class ApplicationController < ActionController::Base
   # For all responses in this controller, return the CORS access control headers.
 
   def cors_set_access_control_headers
-<<<<<<< HEAD
     if request.headers["HTTP_ORIGIN"] == 'http://golubitsky.github.io' ||
       request.headers["HTTP_ORIGIN"] == 'https://golubitsky.github.io'
       access_control_allow_origin = request.headers["HTTP_ORIGIN"]
     end
 
     headers['Access-Control-Allow-Origin'] = access_control_allow_origin
-=======
     headers['Access-Control-Allow-Origin'] = '//golubitsky.github.io'
->>>>>>> 1669178a7b37c724f8f3abf967d4396317d760a2
     headers['Access-Control-Allow-Methods'] = 'POST, GET'
     headers['Access-Control-Request-Method'] = 'POST'
   end
