@@ -29,8 +29,8 @@ class Api::GamesController < ApplicationController
   end
 
   def approved_origin?
-    if request.headers['origin'] != 'http://golubitsky.github.io'
-      render json: { error: "Unapproved origin." }
+    unless request.headers['origin'] =~ /golubitsky\.github\.io/
+      render json: { error: "Hack something else please!" }
     end
   end
 
