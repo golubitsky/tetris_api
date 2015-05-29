@@ -13,7 +13,6 @@ class ApplicationController < ActionController::Base
     end
 
     headers['Access-Control-Allow-Origin'] = access_control_allow_origin
-    headers['Access-Control-Allow-Origin'] = '//golubitsky.github.io'
     headers['Access-Control-Allow-Methods'] = 'POST, GET'
     headers['Access-Control-Request-Method'] = 'POST'
   end
